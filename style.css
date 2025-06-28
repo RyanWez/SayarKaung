@@ -623,6 +623,7 @@ footer p {
     width: 200px; /* Adjust as needed */
     margin-right: 10px; /* Space between logo and text */
     transition: transform 0.3s ease;
+    object-fit: contain; /* Add this to ensure the image scales within its bounds without cropping if aspect ratio is ever an issue */
 }
 
 .logo-link:hover .logo-image {
@@ -647,6 +648,7 @@ footer p {
 @media (max-width: 768px) {
     .logo-image {
         height: 35px; /* Adjust for mobile */
+        width: auto;   /* Add this to maintain aspect ratio */
     }
 
     .logo-text {
@@ -657,6 +659,7 @@ footer p {
 @media (max-width: 480px) {
     .logo-image {
         height: 30px; /* Adjust for smaller mobile */
+        width: auto;   /* Add this to maintain aspect ratio */
         margin-right: 8px;
     }
 

@@ -609,3 +609,58 @@ footer p {
         font-size: 1.8rem;
     }
 }
+
+/* Logo Styles */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+.logo-image {
+    height: 63px; /* Adjust as needed */
+    width: 200px; /* Adjust as needed */
+    margin-right: 10px; /* Space between logo and text */
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .logo-image {
+    transform: scale(1.04);
+}
+
+/*.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: text-shadow 0.3s ease;
+}*/
+
+.logo-link:hover .logo-text {
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+/* Adjust existing .logo class if it conflicts or remove if not needed anymore */
+/* For example, if .logo was only for text, it might not be needed */
+/* Or, ensure it doesn't override new styles for .logo-text or .logo-link */
+
+/* Ensure the new logo scales well on mobile */
+@media (max-width: 768px) {
+    .logo-image {
+        height: 35px; /* Adjust for mobile */
+    }
+
+    .logo-text {
+        font-size: 1.3rem; /* Adjust for mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-image {
+        height: 30px; /* Adjust for smaller mobile */
+        margin-right: 8px;
+    }
+
+    .logo-text {
+        font-size: 1.2rem; /* Adjust for smaller mobile */
+    }
+}

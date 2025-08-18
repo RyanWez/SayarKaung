@@ -1,17 +1,30 @@
 <!DOCTYPE html>
 <html lang="my">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sayar Kaung - Online Game, Slot Agent နှင့် ဘောလုံးလောင်းကစား ဝန်ဆောင်မှု</title>
-        <meta name="description" content="Sayar Kaung (BettingHolic) သည် မြန်မာနိုင်ငံ၏ ယုံကြည်စိတ်ချရဆုံးသော Online Game Agent ဖြစ်သည်။ Slot ဂိမ်းများ၊ ဘောလုံးလောင်းကစား (IBet789, Sport899) နှင့် 2D/3D ဝန်ဆောင်မှုများကို 24 နာရီ ရရှိနိုင်ပါသည်။ Agent ဖြစ်လိုသူများ ဆက်သွယ်နိုင်ပါသည်။">
-        <meta name="keywords" content="Sayar Kaung, Online Game, Online Slot, Betting Holic, Online Agent, ဘောလုံးလောင်းကစား, 2D, 3D, iBet789, Sport899, Batman, RedBull10x, Agent">
-        <meta name="google-site-verification" content="GpLC3O8hfz2bvGG5kQDh2yYce8fpB9t10SpIJ8Q-rD8" />
-        <link rel="icon" type="image/x-icon" href="images/favico.ico">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    </head>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sayar Kaung - Online Game, Slot Agent နှင့် ဘောလုံးလောင်းကစား ဝန်ဆောင်မှု</title>
+    <meta name="description"
+        content="Sayar Kaung (BettingHolic) သည် မြန်မာနိုင်ငံ၏ ယုံကြည်စိတ်ချရဆုံးသော Online Game Agent ဖြစ်သည်။ Slot ဂိမ်းများ၊ ဘောလုံးလောင်းကစား (IBet789, Sport899) နှင့် 2D/3D ဝန်ဆောင်မှုများကို 24 နာရီ ရရှိနိုင်ပါသည်။ Agent ဖြစ်လိုသူများ ဆက်သွယ်နိုင်ပါသည်။">
+    <meta name="keywords"
+        content="Sayar Kaung, Online Game, Online Slot, Betting Holic, Online Agent, ဘောလုံးလောင်းကစား, 2D, 3D, iBet789, Sport899, Batman, RedBull10x, Agent">
+    <meta name="google-site-verification" content="GpLC3O8hfz2bvGG5kQDh2yYce8fpB9t10SpIJ8Q-rD8" />
+    <link rel="icon" type="image/x-icon" href="images/favico.ico">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
 <body>
+    <!-- Pre-loader -->
+    <div id="preloader" class="preloader">
+        <div class="loader">
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
@@ -35,22 +48,29 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero">
+        <!-- Interactive Grid Background -->
+        <div class="grid-background">
+            <canvas id="gridCanvas"></canvas>
+        </div>
+
         <div class="container">
             <div class="hero-content">
                 <h1>BettingHolic - နာမည်ပျက်မရှိ ယုံကြည်စိတ်ချရဆုံး Online Game နှင့် Slot Agent</h1>
                 <p>Agent အလုပ်ကို စိတ်ဝင်စားပြီး ငွေရှာချင်သူများ ယုံကြည်စွာ လာရောက်လက်တွဲနိုင်ပါတယ်</p>
-                
+
                 <!-- Senior Sayar Kaung & Master Wii Section -->
                 <div class="agents-section">
-                    <a href="https://www.facebook.com/sayar.kaung.784429" class="agent-text" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/sayar.kaung.784429" class="agent-text" target="_blank"
+                        rel="noopener noreferrer">
                         Sayar Kaung
                     </a>
                     <span class="handshake-emoji">🤝</span>
-                    <a href="https://www.facebook.com/ye.gyi.623589" class="agent-text" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.facebook.com/ye.gyi.623589" class="agent-text" target="_blank"
+                        rel="noopener noreferrer">
                         Young Glory
                     </a>
                 </div>
-                
+
                 <a href="#contact" class="cta-button">ခုပဲ ဆက်သွယ်လိုက်ဗျာ</a>
             </div>
         </div>
@@ -60,16 +80,18 @@
     <section id="services" class="services">
         <div class="container">
             <h2>ဝန်ဆောင်မှုများ</h2>
-            <div class="services-grid">
+            <div class="services-grid" >
                 <div class="service-card">
                     <i class="fas fa-dice"></i>
                     <h3>Slot ဂိမ်းများ (Online Slot)</h3>
-                    <p>အကောင်းဆုံးနှင့် နောက်ဆုံးပေါ် Slot ဂိမ်းပေါင်းများစွာကို ကစားပြီး ဆုကြေးငွေများစွာကို ကံစမ်းနိုင်ပါသည်။</p>
+                    <p>အကောင်းဆုံးနှင့် နောက်ဆုံးပေါ် Slot ဂိမ်းပေါင်းများစွာကို ကစားပြီး ဆုကြေးငွေများစွာကို
+                        ကံစမ်းနိုင်ပါသည်။</p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-futbol"></i>
                     <h3>ဘောလုံးလောင်းကစား</h3>
-                    <p>နိုင်ငံတကာ ဘောလုံးပွဲများကို အကောင်းဆုံးမောင်းများနှင့်အတူ ယုံကြည်စိတ်ချစွာ လောင်းကစားနိုင်ပါသည်။</p>
+                    <p>နိုင်ငံတကာ ဘောလုံးပွဲများကို အကောင်းဆုံးမောင်းများနှင့်အတူ ယုံကြည်စိတ်ချစွာ လောင်းကစားနိုင်ပါသည်။
+                    </p>
                 </div>
                 <div class="service-card">
                     <i class="fas fa-ticket-alt"></i>
@@ -88,42 +110,50 @@
                 <div class="partner-card" data-site="https://bt6688.net" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt click-icon"></i>
                     <div class="partner-logo">
-                        <img src="https://bt6688.net/imgs/logo.png" alt="Batman Logo" onerror="this.style.display='none'">
+                        <img src="https://bt6688.net/imgs/logo.png" alt="Batman Logo"
+                            onerror="this.style.display='none'">
                     </div>
                     <h3>Batman</h3>
                 </div>
                 <div class="partner-card" data-site="https://sportsxzone.com" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt click-icon"></i>
                     <div class="partner-logo">
-                        <img src="https://ag.sportsxzone.com/img/main_logo_dark.png" alt="Sports X Zone Logo" onerror="this.style.display='none'">
+                        <img src="https://ag.sportsxzone.com/img/main_logo_dark.png" alt="Sports X Zone Logo"
+                            onerror="this.style.display='none'">
                     </div>
                     <h3>Sports X Zone</h3>
                 </div>
-                <div class="partner-card" data-site="https://m.bet555mix.com/" target="_blank" rel="noopener noreferrer">
+                <div class="partner-card" data-site="https://m.bet555mix.com/" target="_blank"
+                    rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt click-icon"></i>
                     <div class="partner-logo">
-                        <img src="https://static.download.it/gen/android/555mix-100x100.png" alt="bet555mix Logo" onerror="this.style.display='none'">
+                        <img src="https://static.download.it/gen/android/555mix-100x100.png" alt="bet555mix Logo"
+                            onerror="this.style.display='none'">
                     </div>
                     <h3>Bet555 Mix</h3>
                 </div>
                 <div class="partner-card" data-site="https://ibet789.com" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt click-icon"></i>
                     <div class="partner-logo">
-                        <img src="https://www.ibet789.com/Images/index/logo.png" alt="IBet789 Logo" onerror="this.style.display='none'">
+                        <img src="https://www.ibet789.com/Images/index/logo.png" alt="IBet789 Logo"
+                            onerror="this.style.display='none'">
                     </div>
                     <h3>IBet789</h3>
                 </div>
-                <div class="partner-card" data-site="https://m.sports899.live/auth" target="_blank" rel="noopener noreferrer">
+                <div class="partner-card" data-site="https://m.sports899.live/auth" target="_blank"
+                    rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt click-icon"></i>
                     <div class="partner-logo">
-                        <img src="https://m.sports899.live/static/media/logo.14e9966b1b01a9364499.webp" alt="Sports899 Logo" onerror="this.style.display='none'">
+                        <img src="https://m.sports899.live/static/media/logo.14e9966b1b01a9364499.webp"
+                            alt="Sports899 Logo" onerror="this.style.display='none'">
                     </div>
                     <h3>Sports899</h3>
                 </div>
                 <div class="partner-card" data-site="https://redbull10x.vip" target="_blank" rel="noopener noreferrer">
                     <i class="fas fa-external-link-alt click-icon"></i>
                     <div class="partner-logo">
-                        <img src="https://redbull10x.vip/assets/games/logo.png" alt="RedBull10x Logo" onerror="this.style.display='none'">
+                        <img src="https://redbull10x.vip/assets/games/logo.png" alt="RedBull10x Logo"
+                            onerror="this.style.display='none'">
                     </div>
                     <h3>RedBull10x</h3>
                 </div>
@@ -136,7 +166,8 @@
         <div class="container">
             <h2>ဆက်သွယ်ရန်</h2>
             <div class="social-links">
-                <a href="https://www.facebook.com/sayar.kaung.784429" target="_blank" rel="noopener noreferrer" class="social-card">
+                <a href="https://www.facebook.com/sayar.kaung.784429" target="_blank" rel="noopener noreferrer"
+                    class="social-card">
                     <i class="fab fa-facebook"></i>
                     <span>Facebook</span>
                 </a>
@@ -144,7 +175,8 @@
                     <i class="fab fa-telegram"></i>
                     <span>Telegram</span>
                 </a>
-                <a href="https://msng.link/o?09951038636=vi" target="_blank" rel="noopener noreferrer" class="social-card">
+                <a href="https://msng.link/o?09951038636=vi" target="_blank" rel="noopener noreferrer"
+                    class="social-card">
                     <i class="fab fa-viber"></i>
                     <span>Viber</span>
                 </a>
@@ -155,10 +187,12 @@
     <footer>
         <div class="container">
             <p>&copy; 2025 Sayar Kaung. All rights reserved.</p>
-            <p> Dev ❤️ by <a href="https://ryanwez.vercel.app" target="_blank" rel="noopener noreferrer" class="ryan-link">Ryan Wez</a> </p>
+            <p> Dev ❤️ by <a href="https://ryanwez.github.io" target="_blank" rel="noopener noreferrer"
+                    class="ryan-link">Ryan Wez</a> </p>
         </div>
     </footer>
 
     <script src="script.js"></script>
 </body>
+
 </html>

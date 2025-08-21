@@ -93,7 +93,7 @@ body {
 }
 
 .logo-image {
-    height: 45px;
+    height: 65px;
     width: auto;
     margin-right: 10px;
     transition: var(--transition);
@@ -720,3 +720,4 @@ button:focus,
         opacity: 1;
     }
 }
+

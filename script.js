@@ -148,30 +148,37 @@ function initSmoothScrolling() {
     });
 }
 
-// Scroll Reveal Animation using Intersection Observer
+// Enhanced Scroll Reveal Animation using Intersection Observer
 function initScrollReveal() {
-    const revealElements = document.querySelectorAll('.service-card, .partner-card, .social-card, section h2');
-    
-    // Add reveal class to elements
-    revealElements.forEach(el => {
-        el.classList.add('reveal');
-    });
+    // Select all elements that have reveal class or need to be revealed
+    const revealElements = document.querySelectorAll(`
+        .service-card, .partner-card, .social-card, .agent-text, .cta-button,
+        .hero-content, section h2, .social-links
+    `);
 
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.15,
+        rootMargin: '0px 0px -30px 0px'
     };
 
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-                observer.unobserve(entry.target);
+                // Add a small delay before triggering animation for smoother effect
+                setTimeout(() => {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }, 50);
             }
         });
     }, observerOptions);
 
     revealElements.forEach(el => {
+        // Ensure elements have the reveal class
+        if (!el.classList.contains('reveal')) {
+            // Add default fade-up if no direction specified
+            el.classList.add('reveal', 'fade-up');
+        }
         observer.observe(el);
     });
 }
@@ -394,7 +401,7 @@ function initGridBackground() {
     });
 }
 
-// Loading Animations
+// Loading Animations (compatible with scroll reveal)
 function initLoadingAnimations() {
     // Add loading class to body
     document.body.classList.add('loading');
@@ -403,19 +410,25 @@ function initLoadingAnimations() {
     window.addEventListener('load', function() {
         setTimeout(() => {
             document.body.classList.remove('loading');
-            
-            // Trigger hero content animation
+
+            // Trigger initial reveal animations after loading completes
             const heroContent = document.querySelector('.hero-content');
             if (heroContent) {
-                heroContent.style.opacity = '0';
-                heroContent.style.transform = 'translateY(30px)';
-                
+                // Let the scroll reveal handle the animation, but ensure it's triggered on load
                 setTimeout(() => {
-                    heroContent.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
-                    heroContent.style.opacity = '1';
-                    heroContent.style.transform = 'translateY(0)';
-                }, 100);
+                    heroContent.classList.add('active');
+                }, 200);
             }
+
+            // Also trigger section headers that are immediately visible
+            const visibleHeaders = document.querySelectorAll('section h2');
+            visibleHeaders.forEach(header => {
+                if (isInViewport(header)) {
+                    setTimeout(() => {
+                        header.classList.add('active');
+                    }, 300);
+                }
+            });
         }, 500);
     });
 }
